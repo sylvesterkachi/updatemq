@@ -3,7 +3,7 @@ java_version=`java -version |& awk -F '"' '/version/ {print $2}'`
 if [[ "$java_version" =~ .*1\.8.*  ]]; then
     echo "Java is up to date"
 else 
-    echo "Updating java to 1.8..."
+    echo "Updating Java..."
     wget https://corretto.aws/downloads/latest/amazon-corretto-17-x64-linux-jdk.rpm > /dev/null 2>&1
     sudo yum localinstall -y java-17-amazon-corretto-devel-17.0.9.8-1.x86_64.rpm > /dev/null 2>&1
 fi
